@@ -1,0 +1,26 @@
+.header {
+  background-image: url('../img/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+
+  &__top-header {
+    margin-top: 33px;
+  }
+  
+  &__caption {
+    margin: 150px auto;
+    width: 670px;
+  }
+  
+  &__heading {
+    font-size: 50px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  &__menu {
+    background-color: $accent;
+  }
+}

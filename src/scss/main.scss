@@ -1,0 +1,18 @@
+@import "global/libraries";
+@import "global/mixins";
+@import "global/variables";
+@import "global/fonts";
+@import "global/scaffolding";
+
+/***Components***/
+@import "blocks/page";
+@import "blocks/top-nav";
+@import "blocks/logo";
+@import "blocks/menu";
+
+/*****Sections*****/
+@import "blocks/header";
+@import "blocks/footer";
+
+/*****JavaScript*****/
+// @import "blocks/js-animations";

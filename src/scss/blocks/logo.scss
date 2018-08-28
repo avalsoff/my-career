@@ -1,0 +1,31 @@
+.logo {
+  text-decoration: none;
+  color: $secondary;
+  cursor: pointer;
+  display: flex;
+
+  &__image-wrapper {
+    object-fit: contain;
+  }
+
+  &__image {
+    width: 70px;
+  }
+
+  &__caption-wrapper {
+    margin-left: 25px;
+    width: 250px;
+  }
+
+  &__heading {
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  &__caption {
+    margin: 0;
+    margin-top: 2px;
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,39 @@
+.top-nav {
+  &__items {
+    @include list-reboot();
+    display: flex;
+  }
+
+  &__item {
+    margin: 0 15px;
+  }
+
+  &__link {
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $accent;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &--icon {
+      width: 40px;
+      height: 30px;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+
+      &--eye {
+        background-image: url('../img/eye.svg');
+      }
+
+      &--search {
+        height: 23px;
+        background-image: url('../img/search.svg');
+      }
+    }
+  }
+}
