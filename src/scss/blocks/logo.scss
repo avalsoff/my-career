@@ -5,11 +5,12 @@
   display: flex;
 
   &__image-wrapper {
-    object-fit: contain;
+    width: 70px;
   }
 
   &__image {
-    width: 70px;
+    width: 100%;
+    height: auto;
   }
 
   &__caption-wrapper {
