@@ -45,6 +45,9 @@
     background-size: contain;
     background-position: 50% 50%;
 
+    &:hover {
+      filter: brightness(150%);
+    }
 
     &--prev {
       left: -50px;

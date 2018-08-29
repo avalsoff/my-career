@@ -1,0 +1,25 @@
+.breadcrumbs {
+  @include list-reboot();
+  margin-top: 38px;
+  text-align: center;
+
+  &__link {
+    text-transform: capitalize;    
+  }
+
+  &__item {
+    display: inline-block;
+    vertical-align: top;
+
+    &::after {
+      content: "/";
+      display: inline;
+    }
+
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+  }
+}

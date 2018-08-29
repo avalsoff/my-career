@@ -1,0 +1,41 @@
+.pagination {
+  @include list-reboot();
+  text-align: center;
+
+  &__item {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 5px;
+  }
+
+  &__link {
+    display: block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+
+    &--active {
+      border-radius: 50%;
+      background-color: rgba(#000, .1);
+      color: #000;
+    }
+
+    &--icon {
+      @include bg-icon();
+      width: 8px;
+      height: 30px;
+      font-size: 0;
+      margin: 0 8px;
+
+      &--prev {
+        background-image: url('../img/prev.svg');
+      }
+
+      &--next {
+        background-image: url('../img/next.svg');
+      }
+    }
+  }
+
+}

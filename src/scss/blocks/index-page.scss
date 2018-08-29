@@ -3,5 +3,8 @@
     margin: 0 75px 70px;
   }
   
+  &__news-list {    
+    @include list-reboot();
+  }  
   
 }

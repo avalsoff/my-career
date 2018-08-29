@@ -86,6 +86,13 @@ a {
     font-weight: bold;
     text-transform: uppercase;
   }
+
+  &--page {
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 5px;
+  }
 }
 
 .section-header {
