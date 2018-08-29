@@ -53,13 +53,42 @@ a {
     text-decoration: underline;
   }
 
+  &--icon {
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      left: -32px;
+      top: -2px;
+      width: 25px;
+      height: 25px;
+      @include bg-icon();
+    }
+
+    &--list {
+      &::before {
+        background-image: url('../img/list.svg')
+      }
+    }
+  }
+
   &--title {
     color: $accent;
     font-size: 18px;
     text-decoration: none;
+    font-weight: bold;
   }
 }
 
-.js-slick {
-  margin: 0 75px;
+.heading {
+  &--section {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
+.section-header {
+  margin-top: 70px;
+  margin-bottom: 40px;
 }

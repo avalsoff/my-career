@@ -10,10 +10,17 @@
 @import "blocks/logo";
 @import "blocks/menu";
 @import "blocks/slide";
+@import "blocks/links-group";
+@import "blocks/circle-image";
+@import "blocks/text";
+@import "blocks/news-item";
 
 /*****Sections*****/
 @import "blocks/header";
 @import "blocks/footer";
+
+/*******Pages*******/
+@import "blocks/index-page";
 
 /*****JavaScript*****/
 // @import "blocks/js-animations";

@@ -1,0 +1,21 @@
+.news-item {
+  @include list-reboot();
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+
+  
+  &__image {
+    flex: 0 0 auto;
+  }
+
+  &__caption {
+    margin-left: 20px;
+  }
+
+  &__date {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+}

@@ -1,0 +1,44 @@
+.links-group {
+  padding: 40px 50px;
+  border-radius: 20px;
+  border: 1px solid rgba($accent, .3);
+  overflow: hidden;
+
+  &__items {
+    @include list-reboot();
+    display: flex;
+  }
+
+  &__item {
+    padding: 0 62px;
+    position: relative;
+
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      right: 0;
+      top: 18px;
+      width: 1px;
+      height: 148px;
+      background-color: rgba($accent, .3);
+    }
+  }
+
+  &__link {
+    margin-top: 17px;
+    text-align: center;
+    display: block;
+  }
+
+}

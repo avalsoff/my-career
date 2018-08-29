@@ -1,0 +1,17 @@
+.circle-image {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 160px;
+  height: 160px;
+
+  &--small {
+    width: 90px;
+    height: 90px;
+  }
+
+  &__image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -29,3 +29,9 @@
 	bottom: -9999px;
 	margin: auto;
 }
+
+@mixin bg-icon() {	
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: 50% 50%;
+}
