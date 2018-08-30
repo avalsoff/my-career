@@ -1,0 +1,36 @@
+.search {
+  position: relative;
+
+  &__input {
+    border-radius: 10px;
+    border: 1px solid #000;
+    padding: 21px 20px 21px 50px;
+    font-size: 14px;
+    width: 100%;
+    display: block;
+    outline: none;
+  }
+
+  &__icon,
+  &__close {
+    display: block;
+    position: absolute;
+    top: 21px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+  }
+
+  &__icon {
+    background-image: url('../img/input-search.svg');
+    left: 20px;
+  }
+
+  &__close {
+    right: 20px;
+    background-image: url('../img/close.svg');
+  }
+}

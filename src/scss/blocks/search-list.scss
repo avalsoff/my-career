@@ -1,0 +1,35 @@
+.search-list {
+  padding-left: 0;
+  list-style: decimal inside;
+
+  &--primary {
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 780px;
+  }
+
+  &__item {
+    font-weight: bold;
+    border-bottom: 1px solid #D8D8D8;
+    padding: 20px 0 5px;
+  }
+
+  &__item-body {
+    position: relative;
+    margin-left: 18px;   
+    padding-left: 12px;
+    margin-top: -20px;
+  }
+
+  &__link {
+    font-weight: normal;
+    margin-bottom: 0;
+  }
+
+  &__text {
+    font-weight: normal;
+    padding: 0;
+    margin-top: 5px;
+  }
+}

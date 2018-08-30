@@ -1,0 +1,27 @@
+.button {
+  appearance: none;
+  border-radius: 5px;
+  border: 1px solid $accent;
+  background-color: white;
+  color: $accent;
+  text-align: center;
+  padding: 4px 10px;
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+
+  &:hover {
+    background-color: $accent;
+    color: white;
+  }
+
+  &--active {
+    cursor: default;
+    background-color: $accent;
+    color: white;
+  }
+
+  &:hover {
+    background-color: $accent;
+  }
+}

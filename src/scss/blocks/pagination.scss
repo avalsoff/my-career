@@ -28,6 +28,10 @@
       font-size: 0;
       margin: 0 8px;
 
+      &:hover {
+        filter: brightness(130%); 
+      }
+
       &--prev {
         background-image: url('../img/prev.svg');
       }

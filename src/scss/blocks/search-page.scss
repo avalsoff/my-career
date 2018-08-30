@@ -1,0 +1,18 @@
+.search-page {
+  padding-bottom: 70px;
+  &__search {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 21px;
+    max-width: 780px;
+  }
+
+  &__tag {
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__pagination {
+    margin-top: 30px;
+  }
+}
