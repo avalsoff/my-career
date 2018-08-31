@@ -1,0 +1,10 @@
+.tabs {
+  @include list-reboot();
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  &__item {
+    margin: 0 10px 10px;
+  }
+}

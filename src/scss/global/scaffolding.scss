@@ -53,6 +53,10 @@ a, button {
     text-decoration: underline;
   }
 
+  &--tel {
+    color: #000;
+  }
+
   &--icon {
     position: relative;
     &::before {
