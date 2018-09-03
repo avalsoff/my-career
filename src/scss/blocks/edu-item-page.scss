@@ -1,0 +1,22 @@
+.edu-item-page {
+  padding-bottom: 70px;
+  &__container {
+    max-width: 780px;
+    margin: 0 auto;
+  }
+
+  &__carousel {
+    margin-bottom: 20px;
+    margin-top: 40px;
+  }
+
+  hr {
+    margin: 0;
+    border: none;
+    border-top: 1px solid #D8D8D8;
+  }
+
+  &__logo {
+    margin: 20px auto;
+  }
+}

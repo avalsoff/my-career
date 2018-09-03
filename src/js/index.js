@@ -2,25 +2,29 @@
 
 const input = `Металлург Метролог Мехатроник Мобильный робототехник Н Наладчик-ремонтник промышленного оборудования Наноинженер О Обвальщик тушек птицы Облицовщик-плиточник Обработчик рыбы Оператор беспилотных летательных аппаратов Оператор птицефабрик и механизированных ферм Оператор свиноводческих комплексов и механизированных ферм Оператор станков с программным управлением Официант, бармен П Парикмахер Переводчик Повар-кондитер Портной Программист Продавец Психолог Р Разработчик web и мультимедийных приложений С Санитар ветеринарный Сантехник Сборщик электронных систем (специалист по электронным приборам и устройствам) Сварщик Сетевой и системный администратор Слесарь Слесарь по КИПиА Слесарь по ремонту автомобилей Слесарь по ремонту газового оборудования Слесарь-сборщик летательных аппаратов Слесарь-трубопроводчик Социальный работник Специалист в области контрольно-измерительных приборов и автоматики (по отраслям) Специалист по аддитивным технологиям Специалист по гостеприимству Специалист по обслуживанию телекоммуникаций Специалист по производству и обслуживанию авиатехники Специалист по связям с общественностью Специалист по социальной работе Специалист по термической обработке металлов`
 
-$(() => {
-  $('.index-page__carousel').slick({
+function makeSlickCarousel (selector, slidesToShow) {
+  $(selector).slick({
     infinite: true,
-    slidesToShow: 2,
-    prevArrow: '<button type="button" class="slide__arrow slide__arrow--prev">Previous</button>',
-    nextArrow: '<button type="button" class="slide__arrow slide__arrow--next">Next</button>',
+    slidesToShow,
+    prevArrow: '<button type="button" class="slick__arrow slick__arrow--prev">Previous</button>',
+    nextArrow: '<button type="button" class="slick__arrow slick__arrow--next">Next</button>',
   });
+}
 
+$(() => {
+  makeSlickCarousel('.index-page__carousel', 2);
+  makeSlickCarousel('.edu-item-page__carousel', 1);
+  
   const body = $('body');
+  
   let i = 0;
-  let isMagicStarted = false;
-
   const magic = () => {
     body.css('filter', `blur(${i}px)`);
     i += .8;
   }
-
-  let interval = {};
-
+  
+  let interval = {};  
+  let isMagicStarted = false;
   const startMagic = () => {
     if (!isMagicStarted) {
       isMagicStarted = true;
