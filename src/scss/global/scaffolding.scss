@@ -57,16 +57,25 @@ a, button {
     color: #000;
   }
 
+  &--bold {
+    font-weight: bold;
+  }
+
+  &--block {
+    margin-top: 20px;
+    display: block;
+  }
+
   &--icon {
     position: relative;
     &::before {
+      @include bg-icon();
       position: absolute;
       content: "";
       left: -32px;
       top: -2px;
       width: 25px;
       height: 25px;
-      @include bg-icon();
     }
 
     &--list {
@@ -81,6 +90,32 @@ a, button {
         left: -22px;
         width: 13px;
         height: 18px;
+      }
+    }
+
+    &--next {
+      display: flex;
+      align-items: center;
+      &::before {
+        display: none;
+      }
+      &::after {
+        @include bg-icon();
+        background-size: 30%;
+        margin-left: 7px;
+        position: relative;
+        top: 1px;
+        width: 22px;
+        height: 22px;
+        border: 1px solid $accent;
+        border-radius: 50%;
+        content: "";
+        background-image: url('../img/next-small.svg');
+      }
+      &:hover {
+        &::after {
+          filter: saturate(350%);
+        }
       }
     }
   }
