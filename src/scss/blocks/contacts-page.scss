@@ -1,0 +1,14 @@
+.contacts-page {
+  padding-bottom: 70px;
+
+  &__container {    
+    max-width: 780px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__map {
+    margin-bottom: 20px;
+    margin-top: 40px;
+  }
+}
