@@ -74,6 +74,19 @@ a, button {
         background-image: url('../img/list.svg')
       }
     }
+
+    &--small {
+      &::before {
+        top: 2px;
+        left: -22px;
+        width: 13px;
+        height: 18px;
+      }
+    }
+  }
+
+  &--italic {
+    font-style: italic;
   }
 
   &--title {
