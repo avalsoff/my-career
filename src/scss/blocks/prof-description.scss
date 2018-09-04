@@ -1,0 +1,43 @@
+.prof-description {
+  @include list-reboot();
+
+  &__prop {
+    font-weight: bold;
+    text-align: center;
+    color: $accent;
+  }
+
+  &__number {
+    font-size: 40px;
+  }
+
+  &__item {
+    display: block;
+    min-height: 270px;
+  }
+
+  &__caption {
+    margin-top: 0;
+  }
+
+  &__footnote {
+    opacity: .3;
+    font-size: 10px;
+    text-align: center;
+    width: 210px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__list {
+    list-style-type: disc;
+    margin-bottom: 20px;
+  }
+
+  &__list-heading {
+    display: block;
+    margin-left: 20px;
+    margin-bottom: 10px;
+  }
+}

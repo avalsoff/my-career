@@ -146,6 +146,24 @@ a, button {
     margin-top: 5px;
     margin-bottom: 20px;
   }
+
+  &--top-icon {
+    position: relative;
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    background: rgba(#D8D8D8, .3);
+    text-align: center;
+    padding: 16px;
+    border-radius: 8.5px;
+    
+    .icon {
+      position: absolute;
+      top: -35px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
 }
 
 .section-header {
