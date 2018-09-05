@@ -1,0 +1,28 @@
+.barometr-page {
+  margin-bottom: 30px;
+  &__wrapper {
+    margin-top: 40px;
+
+    @media only screen and (max-width: 992px) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__aside-heading {
+    margin-top: 9px;
+  }
+
+  &__hr {
+    margin-top: 0;
+  }
+
+  &__districts {
+    @include list-reboot();
+    margin-top: 25px;
+    margin-bottom: 70px;
+  }
+
+  &__dis-item {
+    margin-bottom: 10px;
+  }
+}
