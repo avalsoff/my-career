@@ -20,8 +20,6 @@
 @import "blocks/search";
 @import "blocks/search-list";
 @import "blocks/directory";
-@import "blocks/profs-page";
-@import "blocks/edu-orgs-page";
 @import "blocks/tabs";
 @import "blocks/slick";
 @import "blocks/table";
@@ -38,22 +36,24 @@
 @import "blocks/footer";
 
 /*******Pages*******/
-@import "blocks/index-page";
-@import "blocks/news-page";
-@import "blocks/404-page";
-@import "blocks/career-page";
-@import "blocks/search-page";
-@import "blocks/edu-page";
-@import "blocks/edu-orgs-page";
-@import "blocks/employers-page";
-@import "blocks/edu-item-page";
-@import "blocks/new-item-page";
-@import "blocks/employers-item-page";
-@import "blocks/contacts-page";
-@import "blocks/career13-page";
-@import "blocks/profs-item-page";
-@import "blocks/barometr-page";
-@import "blocks/economy-page";
+@import "pages/index-page";
+@import "pages/news-page";
+@import "pages/404-page";
+@import "pages/career-page";
+@import "pages/search-page";
+@import "pages/edu-page";
+@import "pages/edu-orgs-page";
+@import "pages/employers-page";
+@import "pages/edu-item-page";
+@import "pages/new-item-page";
+@import "pages/employers-item-page";
+@import "pages/contacts-page";
+@import "pages/career13-page";
+@import "pages/profs-item-page";
+@import "pages/barometr-page";
+@import "pages/economy-page";
+@import "pages/profs-page";
+@import "pages/edu-orgs-page";
 
 /*****JavaScript*****/
 // @import "blocks/js-animations";

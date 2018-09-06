@@ -1,5 +1,36 @@
 .economy-page {
+  &__container {
+    max-width: 780px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &__tocer-heading {
+    font-size: 20px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+
+  &__wide-img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__table {
+    margin-top: 35px;
+    margin-bottom: 60px;
+  }
+
   &__info-group {
+    @media only screen and (max-width: 768px) {
+      &--tar {
+        text-align: left;
+      }
+      &--tal {
+        text-align: right;
+      }
+    }
+
     &--tar {
       text-align: right;
     }
@@ -18,6 +49,7 @@
   }
 
   &__map-wrapper {
+    padding: 0 20px;
     width: 100%;
     position: absolute;
     top: 50%;
