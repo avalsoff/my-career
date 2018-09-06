@@ -2,6 +2,7 @@
   &__items {
     @include list-reboot();
     display: flex;
+    flex-wrap: wrap;
   }
 
   &__item {
