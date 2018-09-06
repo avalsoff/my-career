@@ -130,6 +130,15 @@ a, button {
     text-decoration: none;
     font-weight: bold;
   }
+
+  &--active {
+    cursor: default;
+    color: black;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
 .heading {

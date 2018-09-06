@@ -1,0 +1,36 @@
+.economy-page {
+  &__info-group {
+    &--tar {
+      text-align: right;
+    }
+    &--tal {
+      text-align: left;
+    }    
+  }
+
+  &__map {
+    position: relative;
+    min-height: 600px;
+
+    @media only screen and (max-width: 992px) {
+      order: -1;
+    }
+  }
+
+  &__map-wrapper {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__map-image {
+    width: 100%;
+    height: auto;
+  }
+
+  &__tab-content {
+    margin-top: 25px;
+  }
+}

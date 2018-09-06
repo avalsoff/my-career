@@ -1,0 +1,32 @@
+.chart-info {
+  display: block;
+  margin-bottom: 40px;
+  
+  // Table reboot
+  tbody, tr, th {display: block;}
+  td {display: inline;}
+  
+  th {
+    opacity: .5;
+    font-weight: normal;
+    margin-bottom: 2px;
+  }
+  
+  &__value {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  &__key {
+    font-size: 18px;
+  }
+  
+  &__arrow {  
+    &-up {
+      color: $normal;
+    }
+    &-down {
+      color: $caution
+    }
+  }
+}
