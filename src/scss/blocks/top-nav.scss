@@ -1,12 +1,26 @@
 .top-nav {
+  display: flex;
+  justify-content: flex-end;
+
+  @media only screen and (max-width: 992px) {
+    justify-content: flex-start;
+  }
+
+  @media only screen and (max-width: 768px) {
+    display: block;
+  }
+
   &__items {
     @include list-reboot();
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
   }
 
   &__item {
     margin: 0 15px;
+    margin-bottom: 10px;
   }
 
   &__link {

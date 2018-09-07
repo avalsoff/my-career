@@ -27,14 +27,31 @@
 
   &__item {
     margin-top: 2px;
+    @media only screen and (max-width:  568px) {
+      margin-top: 5px;
+    }
   }
 
   &__link {
     text-decoration: none;
     color: white;
 
+    width: 50%;
+
+    @media only screen and (max-width: 568px) {
+      margin: 5px 0;
+    }
+
     &:hover {
       text-decoration: underline;
+    }
+  }
+
+  &__info {
+    .justify-content-between {
+      @media only screen and (max-width: 568px) {
+        flex-wrap: wrap;
+      }
     }
   }
 }

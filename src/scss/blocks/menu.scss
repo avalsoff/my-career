@@ -1,23 +1,24 @@
 .menu {
   background-color: $accent;
-
+  position: relative;
+  
   &__items {
     @include list-reboot();
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    
     @media only screen and (max-width: 992px) {
       flex-wrap: wrap;
     }
   }
-
+  
   &__item {
     @media only screen and (max-width: 768px) {
       width: 100%;
     }
   }
-
+  
   &__link {
     display: block;
     text-decoration: none;
@@ -28,10 +29,62 @@
     font-weight: bold;
     font-size: 13px;
     text-align: center;
-
+    
     &:hover {
       background-color: lighten($accent, 7)
     }
+    
+    &--hamburger {
+      top: 12px;
+      position: absolute;
+      right: 0;
+      display: none;
+      background: transparent;
+      @include bg-icon();
+      border: none;
+      margin-left: auto;
+      background-image: url('../img/menu.svg');
+      font-size: 0;
+      width: 40px;
+      height: 40px;
+    }
   }
+}
 
+@media only screen and (max-width: 768px) {
+  .menu {
+    &__items {
+      min-height: 80px;
+    }
+    &__link--hamburger {
+      right: -15px;
+      display: block;
+      outline: none;
+      &:hover {
+        background-color: transparent;
+      }
+    }
+    &__item {
+      display: none;
+      
+      &--active {
+        display: block;
+      }
+    }
+  }
+  
+  .menu--js-show {
+    .menu {
+      &__item {
+        display: block;
+      }
+      &__link {
+        &--hamburger {
+          width: 30px;
+          height: 30px;
+          background-image: url('../img/close-menu.svg');
+        }
+      }
+    }
+  }
 }

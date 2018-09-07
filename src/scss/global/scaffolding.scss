@@ -180,8 +180,13 @@ a, button {
   margin-bottom: 40px;
 
   .link--icon {
+    line-height: 25px;
     margin-left: 30px;
   }
+}
+
+.justify-content-between {
+  display: flex;
 }
 
 * {

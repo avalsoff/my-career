@@ -43,4 +43,12 @@ $(() => {
   }
 
   $('.logo').click(startMagic);
+
+
+  const hamburger = $('.menu__link--hamburger');
+  const menu = $('.menu');
+
+  hamburger.click(() => {
+    menu.toggleClass('menu--js-show');
+  });
 })
