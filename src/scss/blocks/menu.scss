@@ -17,6 +17,10 @@
     @media only screen and (max-width: 768px) {
       width: 100%;
     }
+
+    &--menu {
+      display: none;
+    }
   }
   
   &__link {
@@ -69,6 +73,14 @@
       
       &--active {
         display: block;
+      }
+
+      &--menu {
+        display: block;
+        a {
+          font-size: 17px;
+          letter-spacing: 2px;
+        }
       }
     }
   }

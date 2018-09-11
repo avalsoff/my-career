@@ -30,6 +30,10 @@
 .slide--medium {
   width: 780px;
   margin: 0;
+
+  @media only screen and (max-width: 992px) {
+    margin: 0 25px;
+  }
   
   .slide {
     &__image-wrapper {

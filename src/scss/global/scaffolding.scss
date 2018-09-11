@@ -153,7 +153,11 @@ a, button {
     font-size: 40px;
     text-align: center;
     margin-top: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 20px;    
+
+    @media only screen and (max-width: 568px) {
+      font-size: 25px;
+    }
   }
 
   &--top-icon {

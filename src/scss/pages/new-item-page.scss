@@ -1,7 +1,8 @@
 .new-item-page {
   padding-bottom: 25px;
   &__picture {
-    width: 780px;
+    width: 100%;
+    max-width: 780px;
     display: block;
     margin: 0 auto;
     margin-top: 40px;

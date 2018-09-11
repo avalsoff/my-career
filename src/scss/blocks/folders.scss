@@ -6,6 +6,10 @@
     display: flex;
     align-items: baseline;
     height: 47px;
+
+    @media only screen and (max-width: 568px) {
+      align-items: center;
+    }
   }
 
   &__heading {

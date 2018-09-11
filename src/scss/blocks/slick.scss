@@ -52,6 +52,18 @@
     &__arrow {
       top: 50%;
       
+      @media only screen and (max-width:  568px) {
+        height: 50px;
+        width: 25px;
+  
+        &--prev {
+          left: -20px;
+        }
+        &--next {
+          right: -20px;
+        }
+      }
+      
       &--prev {
         left: -75px;
         background-image: url('../img/prev.svg');
