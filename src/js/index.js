@@ -50,11 +50,12 @@ $(() => {
     if ($currentActive) {
       $prevActive = $currentActive;
     }
-    $currentActive = $('.' + this.classList[0]);
+    const currentSelector = '.' + this.classList[0];
+    $currentActive = $(currentSelector);
     if ($prevActive) {
       $prevActive.toggleClass('active');
     }
-    $currentActive.toggleClass('active');    
+    $currentActive.toggleClass('active');
   });  
   
 });
