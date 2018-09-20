@@ -1,4 +1,5 @@
 .economy-page {
+  padding-bottom: 70px;
   &__container {
     max-width: 780px;
     margin-right: auto;
@@ -64,6 +65,19 @@
 
   &__tab-content {
     margin-top: 25px;
+  }
+  
+  &__hr {
+    margin-top: 30px;
+  }
+
+  &__region-tab {
+    margin-top: 35px;
+  }
+
+  &__region-table {
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 
   path {

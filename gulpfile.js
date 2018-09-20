@@ -71,9 +71,8 @@ gulp.task('js:del', () => {
 
 gulp.task('js', ['js:del'], () => {
   gulp.src([
-    // 'src/libs/glide/glide.min.js',
-    // 'src/libs/flickity/flickity.min.js',
     'src/libs/slick/slick/slick.min.js',
+    'src/libs/highcharts/highcharts.js',
     'src/js/*.js' // At the end
   ])
     .pipe(plumber())
