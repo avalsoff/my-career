@@ -16,7 +16,8 @@
     color: white;
   }
 
-  &--active {
+  &--active,
+  &.active {
     cursor: default;
     background-color: $accent;
     color: white;

@@ -65,6 +65,11 @@
 
   &__tab-content {
     margin-top: 25px;
+    display: none;
+
+    &.active {
+      display: block;
+    }
   }
   
   &__hr {
@@ -80,7 +85,7 @@
     margin-bottom: 20px;
   }
 
-  path {
+  .reg-map {
     cursor: pointer;
     &:hover,
     &.active {
@@ -95,7 +100,7 @@
     left: 0px;
     z-index: 1;
     background-color: #ffffff;
-    border: 2px solid #BF0A30;
+    border: 2px solid $accent;
     border-radius: 5px;
     padding: 5px;
   }

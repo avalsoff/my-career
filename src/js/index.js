@@ -1,11 +1,15 @@
 'use strict'
 
+function slickArrow(mod) {
+  return `<button type="button" class="slick__arrow slick__arrow--${mod}">Previous</button>`
+}
+
 function makeSlickCarousel (selector, slidesToShow) {
   $(selector).slick({
     infinite: true,
     slidesToShow,
-    prevArrow: '<button type="button" class="slick__arrow slick__arrow--prev">Previous</button>',
-    nextArrow: '<button type="button" class="slick__arrow slick__arrow--next">Next</button>', 
+    prevArrow: slickArrow('prev'),
+    nextArrow: slickArrow('next'), 
     responsive: [
       {
         breakpoint: 992,
@@ -56,7 +60,25 @@ function initCharts(selector) {
   });
 }
 
-// https://codepen.io/anon/pen/RYYzrq
+function tabFactory($buttons, $prevActive) {
+  let $currentActive = null;
+
+  return () => {
+    $buttons.click(function() {
+      if ($currentActive) {
+        $prevActive = $currentActive;
+      }
+      const currentSelector = '.' + this.classList[0];
+      $currentActive = $(currentSelector);
+      if ($prevActive) {
+        $prevActive.toggleClass('active');
+      }
+      $currentActive.toggleClass('active');
+    });
+  }
+}
+
+// https://codepen.io/anon/pen/RYYzrq generate a tooltip data attr for the map regions
 
 $(() => {
   makeSlickCarousel('.index-page__carousel', 2);
@@ -71,50 +93,30 @@ $(() => {
 //Pages
 function economyPage() {
   $(() => {
-    $("path").hover(function() {
-      $('#info-box').css('display', 'block');
-      $('#info-box').html( $(this).data('info') );
+    const $path = $('.reg-map');
+    $path.hover(function() {
+      $infoBox.css('display', 'block');
+      $infoBox.html( $(this).data('info') );
     });
     
-    $("path").mouseleave(e => {
-      $('#info-box').css('display', 'none');
+    $path.mouseleave(e => {
+      $infoBox.css('display', 'none');
     });
     
+    const $infoBox = $('#info-box');
     $(document).mousemove(e => {
-      $('#info-box')
-      .css('top', e.pageY - $('#info-box').height() - 30);
-      $('#info-box')
-      .css('left', e.pageX - $('#info-box').width() / 2);
+      $infoBox.css('top', e.pageY - $infoBox.height() - 30);
+      $infoBox.css('left', e.pageX - $infoBox.width() / 2);
     }).mouseover();  
     
-    let $prevActive = $('.m21');
-    let $currentActive;
-    $("path, .link, button").click(function() {
-      if ($currentActive) {
-        $prevActive = $currentActive;
-      }
-      const currentSelector = '.' + this.classList[0];
-      $currentActive = $(currentSelector);
-      if ($prevActive) {
-        $prevActive.toggleClass('active');
-      }
-      $currentActive.toggleClass('active');
-    });
+    tabFactory(
+      $('.js-map-tab-button'), 
+      $('.js-map-tab1'),
+    )();
+    tabFactory(
+      $('.js-section-tab-button'), 
+      $('.js-section-tab1'),
+    )();
+   
   });
 }
-
-
-//Make chat
-
-//var $containers = $('.container'),
-// chartConfig = {
-//   chart: {
-//       renderTo: null,
-//       defaultSeriesType: 'column'
-//   }
-// };
-
-// $containers.each(function(i, e){
-// chartConfig.chart.renderTo = e;
-// new Highcharts.Chart(chartConfig);
-// });
