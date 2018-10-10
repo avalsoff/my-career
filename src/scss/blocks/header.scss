@@ -1,5 +1,5 @@
 .header {
-  background-image: url('../img/background-2.jpg');
+  background-image: url('images/background-2.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
@@ -28,7 +28,7 @@
 }
 
 .header--index {
-  background-image: url('../img/background.jpg');
+  background-image: url('images/background.jpg');
 
   .header {
     &__top-header {

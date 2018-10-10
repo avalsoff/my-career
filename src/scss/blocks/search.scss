@@ -22,15 +22,16 @@
     background-color: transparent;
     border: none;
     outline: none;
+    font-size: 0;
   }
 
   &__icon {
-    background-image: url('../img/input-search.svg');
+    background-image: url('images/input-search.svg');
     left: 20px;
   }
 
   &__close {
     right: 20px;
-    background-image: url('../img/close.svg');
+    background-image: url('images/close.svg');
   }
 }

@@ -81,7 +81,7 @@ a, button {
 
     &--list {
       &::before {
-        background-image: url('../img/list.svg')
+        background-image: url('images/list.svg')
       }
     }
 
@@ -111,7 +111,7 @@ a, button {
         border: 1px solid $accent;
         border-radius: 50%;
         content: "";
-        background-image: url('../img/next-small.svg');
+        background-image: url('images/next-small.svg');
       }
       &:hover {
         &::after {
@@ -193,8 +193,4 @@ a, button {
 
 .justify-content-between {
   display: flex;
-}
-
-* {
-  // border: 1px solid #000;
 }

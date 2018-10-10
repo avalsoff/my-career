@@ -47,7 +47,7 @@
       @include bg-icon();
       border: none;
       margin-left: auto;
-      background-image: url('../img/menu.svg');
+      background-image: url('images/menu.svg');
       font-size: 0;
       width: 40px;
       height: 40px;
@@ -94,7 +94,7 @@
         &--hamburger {
           width: 30px;
           height: 30px;
-          background-image: url('../img/close-menu.svg');
+          background-image: url('images/close-menu.svg');
         }
       }
     }

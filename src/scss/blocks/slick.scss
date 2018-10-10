@@ -37,12 +37,12 @@
     
     &--prev {
       left: -50px;
-      background-image: url('../img/prev.svg');
+      background-image: url('images/prev.svg');
     }
     
     &--next {
       right: -50px;
-      background-image: url('../img/next.svg');
+      background-image: url('images/next.svg');
     }
   }
 }
@@ -66,12 +66,12 @@
       
       &--prev {
         left: -75px;
-        background-image: url('../img/prev.svg');
+        background-image: url('images/prev.svg');
       }
       
       &--next {
         right: -75px;
-        background-image: url('../img/next.svg');
+        background-image: url('images/next.svg');
       }
     }
   }

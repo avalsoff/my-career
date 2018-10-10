@@ -36,13 +36,54 @@
       }
 
       &--prev {
-        background-image: url('../img/prev.svg');
+        background-image: url('images/prev.svg');
       }
 
       &--next {
-        background-image: url('../img/next.svg');
+        background-image: url('images/next.svg');
       }
     }
+  }
+
+  .page-numbers {
+    display: block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;    
+    color: #0070ba;
+    cursor: pointer;
+
+    &:hover {      
+      text-decoration: underline;
+    }
+  }
+
+  .current {
+    border-radius: 50%;
+    background-color: rgba(#000, .1);
+    color: #000;
+  }
+
+  .next,
+  .prev {
+    @include bg-icon();
+    width: 8px;
+    height: 30px;
+    font-size: 0;
+    margin: 0 8px;
+
+    &:hover {
+      filter: brightness(130%); 
+    }
+  }
+
+  .next {
+    background-image: url('images/next.svg');
+  }
+
+  .prev {    
+    background-image: url('images/prev.svg');
   }
 
 }

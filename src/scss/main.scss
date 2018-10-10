@@ -1,3 +1,12 @@
+/*!
+Theme Name: My Career
+Theme URI: http://hiddenpool.tech
+Author: Hidden Pool
+Author URI: http://hiddenpool.tech
+Description: Description
+Version: 1.0.0
+*/
+
 @import "global/libraries";
 @import "global/mixins";
 @import "global/variables";
@@ -30,6 +39,7 @@
 @import "blocks/prof-description";
 @import "blocks/folders";
 @import "blocks/chart-info";
+@import "blocks/generic-content";
 
 /*****Sections*****/
 @import "blocks/header";
