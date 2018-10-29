@@ -1,15 +1,48 @@
 .generic-content {
   a {
-    text-decoration:none;
-    color:#0070ba;
-    cursor:pointer;
+    text-decoration: none;
+    color: #0070ba;
+    cursor: pointer;
 
     &:hover {
-      text-decoration:underline;
+      text-decoration: underline;
     }
   }
 
   ul li {
     margin-bottom: 15px;
+  }
+
+  .wide-list {
+    ul {
+      margin: 0;
+      list-style-type: disc;
+    }
+
+    li {
+      margin-bottom: 1px;      
+    }
+
+  }
+
+  .profs-list {
+    ul {
+      margin-bottom: 20px;
+      list-style-type: disc;
+    }
+    li {
+      margin-bottom: 0;
+    }
+    em {
+      margin-left: 20px;
+    }
+
+    &.p0 {
+      ul {
+        margin-bottom: 20px;
+        list-style-type: disc;
+        padding-left: 20px;
+      }
+    }
   }
 }
