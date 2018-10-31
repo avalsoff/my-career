@@ -1,0 +1,26 @@
+.chart-group {
+  display: flex;
+
+  &__links {
+    text-align: right;
+    width: 340px;
+    margin-right: 30px;
+  }
+
+  &__link {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  &__tabs {
+    align-self: flex-end;
+  }
+
+  &__tab {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}
