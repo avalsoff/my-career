@@ -24,6 +24,15 @@ function makeSlickCarousel(selector, slidesToShow) {
 function makeChart(jqObj, type, categories, data) {
   new Highcharts.Chart({
     title: '',
+    plotOptions: {
+      pie: {
+        cursor: 'pointer',
+        dataLabels: {
+          enabled: true,
+          format: '<b>{point.name}</b>: {point.y:.1f}',
+        }
+      }
+    },
     tooltip: {
       enabled: false
     },
