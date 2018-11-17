@@ -1,0 +1,145 @@
+.test {
+  &__description {
+    background: rgba($accent, .1);
+    padding: 15px 30px 30px;
+    border-radius: 8px;
+  }
+
+  &__top-index,
+  &__bottom-index {
+    color: rgba(#000, .3);
+    font-size: 14px;
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  &__instruction {
+    font-style: italic;
+    text-align: center;
+  }
+
+  &__questions {
+    display: none;
+  }
+  
+  &__block {
+    display: none;
+  }
+
+  &__question {
+    font-size: 20px;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 5px;
+  }
+
+  &__main {
+    background: rgba($accent, .1);
+    padding: 20px 30px 30px;
+    border-radius: 8px;
+    margin-top: 40px;
+  }
+
+  
+  &__controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+
+  &__answer {
+    display: block;
+
+    input {
+      appearance: none;
+      position: fixed;
+      opacity: 0;
+
+      &:checked + span {
+        background: $accent;
+        color: #fff;
+      }
+    }
+
+    span {
+      display: block;
+      width: 350px;
+      padding: 8px 10px;
+      border: 1px solid $accent;
+      border-radius: 10px;
+      text-align: center;
+      margin: 0 auto;
+      margin-bottom: 15px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__button {
+    margin-right: 10px;
+    border: none;
+    background: none;
+    padding: 0;
+    font-weight: bold;
+    color: $accent;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+    
+    &--next,
+    &--prev {
+      &:disabled {
+        cursor: not-allowed;
+        opacity: 0.4;
+      }
+    }
+
+    &--start,
+    &--next {
+      position: relative;
+      text-align: left;
+      overflow: visible;
+      outline: none;
+      &::after {
+        content: "";
+        position: relative;
+        display: inline-block;
+        top: 7px;
+        right: -6px;
+        width: 24px;
+        height: 24px;
+        background: url('./images/test-next.svg');
+        background-repeat: no-repeat;
+      }
+    }
+
+    &--prev {
+      margin-left: 10px;
+      position: relative;
+      text-align: left;
+      overflow: visible;
+      outline: none;
+      &::before {
+        content: "";
+        position: relative;
+        display: inline-block;
+        top: 7px;
+        left: -6px;
+        width: 25px;
+        height: 24px;
+        background: url('./images/test-prev.svg');
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  &__result {
+    display: none;
+    margin-top: 20px;
+  }
+}
