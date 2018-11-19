@@ -141,5 +141,17 @@
   &__result {
     display: none;
     margin-top: 20px;
+    background: rgba($accent, .1);
+    padding: 20px 30px 30px;
+    border-radius: 8px;
+    margin-top: 40px;
+  }
+
+  &__res {
+    display: none;
+  }
+
+  &__points {
+    display: inline;
   }
 }
