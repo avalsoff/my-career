@@ -1,6 +1,6 @@
 .search-list {
   padding-left: 0;
-  list-style: decimal inside;
+  list-style-type: none;
 
   &--primary {
     margin: 0 auto;
@@ -21,7 +21,7 @@
 
   &__item-body {
     position: relative;
-    margin-left: 18px;   
+    margin-left: 15px;   
     padding-left: 12px;
     margin-top: -20px;
     font-weight: normal;

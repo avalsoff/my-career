@@ -218,12 +218,12 @@ function careerTest(is18) {
           'sign_system';
 
         elem.questionsBlock.fadeOut(fadeDelay, () => {
-          elem.resultPoints.show().html(elem.resultPoints.text().replace(
+          elem.resultPoints.fadeIn(0).html(elem.resultPoints.text().replace(
             '{{res}}',
             numberOfPoints
           ));
           elem.result.fadeIn(fadeDelay);
-          $('.test__res[data-key="' + resultKey + '"]').show();
+          $('.test__res[data-key="' + resultKey + '"]').fadeIn(0)();
         });
       } else {
         const [resultKey, numberOfPoints] = Object.entries(testResult).reduce(([maxKey, maxVal], [curKey, curVal]) => {
@@ -231,12 +231,12 @@ function careerTest(is18) {
         });
 
         elem.questionsBlock.fadeOut(fadeDelay, () => {
-          elem.resultPoints.show().html(elem.resultPoints.text().replace(
+          elem.resultPoints.fadeIn(0)().html(elem.resultPoints.text().replace(
             '{{res}}',
             numberOfPoints
           ));
           elem.result.fadeIn(fadeDelay);
-          $('.test__res[data-key="' + resultKey + '"]').show();
+          $('.test__res[data-key="' + resultKey + '"]').fadeIn(0)();
         });
       }
     } else {
