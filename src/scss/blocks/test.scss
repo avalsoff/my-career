@@ -7,6 +7,7 @@
 
   &__top-index,
   &__bottom-index {
+    white-space: nowrap;
     color: rgba(#000, .3);
     font-size: 14px;
     display: block;
@@ -66,7 +67,7 @@
 
     span {
       display: block;
-      width: 350px;
+      max-width: 350px;
       padding: 8px 10px;
       border: 1px solid $accent;
       border-radius: 10px;
@@ -81,6 +82,7 @@
   }
 
   &__button {
+    white-space: nowrap;
     margin-right: 10px;
     border: none;
     background: none;

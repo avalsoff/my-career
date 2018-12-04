@@ -28,18 +28,69 @@
   }
 }
 
-.header--index {
-  background-image: url('images/background.jpg');
+@media only screen and (max-width: 568px) {
+  .header .header__heading {    
+    max-width: 450px;
+    font-size: 25px;
+  }
+}
 
-  .header {
-    &__top-header {
-      margin-bottom: 0;
+@media only screen and (max-width: 538px) {
+  .header .header__heading {
+    max-width: 400px;
+    font-size: 25px;
+  }
+}
+
+
+.header--index .header {
+  
+  &__top-header {
+    background: transparent;
+    position: absolute;
+    z-index: 10;
+    margin-top: 33px;
+    margin-bottom: 25px;
+    width: 100%;
+  }
+  
+  &__heading {
+    margin: 240px auto;
+    max-width: 670px;
+    font-size: 50px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+
+    @media only screen and (max-width: 768px) {
+      font-size: 40px;
     }
+  }
+  
+  &__menu {
+    background-color: $accent;
   }
 }
 
 @media only screen and (max-width: 568px) {
-  .header .header__heading {
-    font-size: 25px;
+  .header--index .header__heading {
+    margin-top: 300px;
+    font-size: 15px;
+  }
+}
+
+
+
+.header-carousel {
+  &__slide {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 500px;
+  }
+
+  &:hover .slick-dots {
+    opacity: 1;
   }
 }

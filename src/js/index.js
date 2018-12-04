@@ -95,8 +95,16 @@ function tabFactory($buttons, $prevActive) {
 // https://codepen.io/anon/pen/RYYzrq generate a tooltip data attr for the map regions
 
 $(() => {
-  makeSlickCarousel('.index-page__carousel', 2);
+  makeSlickCarousel('.index-page__carousel', 1);
   makeSlickCarousel('.edu-item-page__carousel', 1);
+  
+  $('.header-carousel').slick({
+    dots: true,
+    arrows: false,
+    infinite: true,
+    slidesToShow: 1,
+  });
+
   initCharts('.js-chart');
 
   $('.menu__link--hamburger').click(() => {
@@ -125,152 +133,152 @@ function economyPage() {
 
     tabFactory(
       $('.js-map-tab-button'),
-      $('.js-map-tab1'),
+      $('.js-map-tab1')
     )();
     tabFactory(
       $('.js-section-tab-button'),
-      $('.js-section-tab1'),
+      $('.js-section-tab1')
     )();
     tabFactory(
       $('.js-chartgroup-tab-button'),
-      $('.js-chartgroup-tab1'),
+      $('.js-chartgroup-tab1')
     )();
   });
 }
 
-function careerTest(is18) {
-  const elem = {
-    startBtn: $('.test__button--start'),
-    description: $('.test__description'),
-    questionsBlock: $('.test__questions'),
-    questions: $('.test__block'),
-    prevBtn: $('.test__button--prev'),
-    nextBtn: $('.test__button--next'),
-    result: $('.test__result'),
-    topIndex: $('.test__top-index'),
-    bottomIndex: $('.test__bottom-index'),
-    answerBtns: $('.test__answer'),
-    resultPoints: $('.test__points')
-  }
-  elem.currentQuestion = elem.questions.first();
+// function careerTest(is18) {
+//   const elem = {
+//     startBtn: $('.test__button--start'),
+//     description: $('.test__description'),
+//     questionsBlock: $('.test__questions'),
+//     questions: $('.test__block'),
+//     prevBtn: $('.test__button--prev'),
+//     nextBtn: $('.test__button--next'),
+//     result: $('.test__result'),
+//     topIndex: $('.test__top-index'),
+//     bottomIndex: $('.test__bottom-index'),
+//     answerBtns: $('.test__answer'),
+//     resultPoints: $('.test__points')
+//   }
+//   elem.currentQuestion = elem.questions.first();
 
-  const fadeDelay = 150;
-  const maxIndex = elem.questions.length;
-  let currentIndex = 0;
-  const testResult = {};
-  const testHistory = [];
+//   const fadeDelay = 150;
+//   const maxIndex = elem.questions.length;
+//   let currentIndex = 0;
+//   const testResult = {};
+//   const testHistory = [];
 
 
-  elem.startBtn.click(() => {
-    elem.description.fadeOut(fadeDelay);
-    elem.startBtn.fadeOut(fadeDelay, () => {
-      elem.questionsBlock.fadeIn(fadeDelay);
-      elem.currentQuestion.fadeIn(fadeDelay);
-    });
-    elem.prevBtn.prop('disabled', true);
-    elem.nextBtn.prop('disabled', true);
-    if (currentIndex === maxIndex) {
-      elem.nextBtn.prop('disabled', true);
-    }
-    updateIndexes();
-  });
+//   elem.startBtn.click(() => {
+//     elem.description.fadeOut(fadeDelay);
+//     elem.startBtn.fadeOut(fadeDelay, () => {
+//       elem.questionsBlock.fadeIn(fadeDelay);
+//       elem.currentQuestion.fadeIn(fadeDelay);
+//     });
+//     elem.prevBtn.prop('disabled', true);
+//     elem.nextBtn.prop('disabled', true);
+//     if (currentIndex === maxIndex) {
+//       elem.nextBtn.prop('disabled', true);
+//     }
+//     updateIndexes();
+//   });
 
-  elem.nextBtn.click(() => {
-    const checked = elem.currentQuestion.find('.test__input:checked');
-    if (!checked.length) {
-      return;
-    }
+//   elem.nextBtn.click(() => {
+//     const checked = elem.currentQuestion.find('.test__input:checked');
+//     if (!checked.length) {
+//       return;
+//     }
 
-    const current = {
-      value: Number(checked.val()),
-      key: checked.data('key')
-    }
+//     const current = {
+//       value: Number(checked.val()),
+//       key: checked.data('key')
+//     }
 
-    testResult[current.key] = testResult[current.key] ?
-      testResult[current.key] + current.value :
-      current.value;
+//     testResult[current.key] = testResult[current.key] ?
+//       testResult[current.key] + current.value :
+//       current.value;
 
-    testHistory.push(current);
+//     testHistory.push(current);
 
-    if (elem.prevBtn.is(':disabled')) {
-      elem.prevBtn.prop('disabled', false)
-    }
+//     if (elem.prevBtn.is(':disabled')) {
+//       elem.prevBtn.prop('disabled', false)
+//     }
 
-    elem.currentQuestion.fadeOut(fadeDelay, function () {
-      elem.currentQuestion = $(this).next();
-      elem.currentQuestion.fadeIn(fadeDelay);
-    });
-    elem.nextBtn.prop('disabled', true);
+//     elem.currentQuestion.fadeOut(fadeDelay, function () {
+//       elem.currentQuestion = $(this).next();
+//       elem.currentQuestion.fadeIn(fadeDelay);
+//     });
+//     elem.nextBtn.prop('disabled', true);
 
-    ++currentIndex;
-    if (currentIndex === maxIndex) {
+//     ++currentIndex;
+//     if (currentIndex === maxIndex) {
 
-      if (is18) {
-        const numberOfPoints = testResult.test;
-        const resultKey = numberOfPoints <= 12 ?
-          'free' :
-          numberOfPoints <= 24 ?
-          'art' :
-          numberOfPoints <= 36 ?
-          'error' :
-          numberOfPoints <= 48 ?
-          'sign_system_middle' :
-          'sign_system';
+//       if (is18) {
+//         const numberOfPoints = testResult.test;
+//         const resultKey = numberOfPoints <= 12 ?
+//           'free' :
+//           numberOfPoints <= 24 ?
+//           'art' :
+//           numberOfPoints <= 36 ?
+//           'error' :
+//           numberOfPoints <= 48 ?
+//           'sign_system_middle' :
+//           'sign_system';
 
-        elem.questionsBlock.fadeOut(fadeDelay, () => {
-          elem.resultPoints.fadeIn(0).html(elem.resultPoints.text().replace(
-            '{{res}}',
-            numberOfPoints
-          ));
-          elem.result.fadeIn(fadeDelay);
-          $('.test__res[data-key="' + resultKey + '"]').fadeIn(0)();
-        });
-      } else {
-        const [resultKey, numberOfPoints] = Object.entries(testResult).reduce(([maxKey, maxVal], [curKey, curVal]) => {
-          return curVal >= maxVal ? [curKey, curVal] : [maxKey, maxVal];
-        });
+//         elem.questionsBlock.fadeOut(fadeDelay, () => {
+//           elem.resultPoints.fadeIn(0).html(elem.resultPoints.text().replace(
+//             '{{res}}',
+//             numberOfPoints
+//           ));
+//           elem.result.fadeIn(fadeDelay);
+//           $('.test__res[data-key="' + resultKey + '"]').fadeIn(0)();
+//         });
+//       } else {
+//         const [resultKey, numberOfPoints] = Object.entries(testResult).reduce(([maxKey, maxVal], [curKey, curVal]) => {
+//           return curVal >= maxVal ? [curKey, curVal] : [maxKey, maxVal];
+//         });
 
-        elem.questionsBlock.fadeOut(fadeDelay, () => {
-          elem.resultPoints.fadeIn(0)().html(elem.resultPoints.text().replace(
-            '{{res}}',
-            numberOfPoints
-          ));
-          elem.result.fadeIn(fadeDelay);
-          $('.test__res[data-key="' + resultKey + '"]').fadeIn(0)();
-        });
-      }
-    } else {
-      updateIndexes();
-    }
-  });
+//         elem.questionsBlock.fadeOut(fadeDelay, () => {
+//           elem.resultPoints.fadeIn(0)().html(elem.resultPoints.text().replace(
+//             '{{res}}',
+//             numberOfPoints
+//           ));
+//           elem.result.fadeIn(fadeDelay);
+//           $('.test__res[data-key="' + resultKey + '"]').fadeIn(0)();
+//         });
+//       }
+//     } else {
+//       updateIndexes();
+//     }
+//   });
 
-  elem.prevBtn.click(() => {
-    if (elem.nextBtn.is(':disabled')) {
-      elem.nextBtn.prop('disabled', false);
-    }
+//   elem.prevBtn.click(() => {
+//     if (elem.nextBtn.is(':disabled')) {
+//       elem.nextBtn.prop('disabled', false);
+//     }
 
-    const {
-      key: lastKey,
-      value: lastValue
-    } = testHistory.pop();
-    testResult[lastKey] -= lastValue;
+//     const {
+//       key: lastKey,
+//       value: lastValue
+//     } = testHistory.pop();
+//     testResult[lastKey] -= lastValue;
 
-    elem.currentQuestion.fadeOut(fadeDelay, function () {
-      elem.currentQuestion = $(this).prev();
-      elem.currentQuestion.fadeIn(fadeDelay);
-    });
-    if (--currentIndex === 0) {
-      elem.prevBtn.prop('disabled', true)
-    }
-    updateIndexes();
-  });
+//     elem.currentQuestion.fadeOut(fadeDelay, function () {
+//       elem.currentQuestion = $(this).prev();
+//       elem.currentQuestion.fadeIn(fadeDelay);
+//     });
+//     if (--currentIndex === 0) {
+//       elem.prevBtn.prop('disabled', true)
+//     }
+//     updateIndexes();
+//   });
 
-  elem.answerBtns.click(() => {
-    elem.nextBtn.prop('disabled', false);
-  });
+//   elem.answerBtns.click(() => {
+//     elem.nextBtn.prop('disabled', false);
+//   });
 
-  function updateIndexes() {
-    elem.topIndex.html(`Вопрос ${currentIndex + 1} из ${maxIndex}`);
-    elem.bottomIndex.html(`${currentIndex + 1} / ${maxIndex}`);
-  }
-}
+//   function updateIndexes() {
+//     elem.topIndex.html(`Вопрос ${currentIndex + 1} из ${maxIndex}`);
+//     elem.bottomIndex.html(`${currentIndex + 1} / ${maxIndex}`);
+//   }
+// }
